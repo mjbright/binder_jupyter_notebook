@@ -4,13 +4,14 @@ MAINTAINER Michael Bright <dockerfiles@mjbright.net>
 
 USER root
 
-#RUN pip install --upgrade pip
+RUN pip install --upgrade pip
 
 # Install bash_kernel:
 # Make sure not to create a cache dir else NB_UID switching
 # will hit issues.
-RUN pip install --no-cache-dir bash_kernel && \
-    python3 -m bash_kernel.install
+RUN pip install --no-cache-dir bash_kernel
+
+RUN python -m bash_kernel.install
 
 USER main
 
