@@ -9,7 +9,7 @@ USER root
 # Install bash_kernel:
 # Make sure not to create a cache dir else NB_UID switching
 # will hit issues.
-RUN pip3 install --no-cache-dir bash_kernel && \
+RUN pip install --no-cache-dir bash_kernel && \
     python3 -m bash_kernel.install
 
 USER main
