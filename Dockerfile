@@ -11,6 +11,11 @@ RUN pip install --upgrade pip
 # will hit issues.
 RUN pip install --no-cache-dir bash_kernel
 
+RUN jupyter kernelspec list
+
+RUN which python
+RUN which pip
+
 RUN python -m bash_kernel.install
 
 USER main
