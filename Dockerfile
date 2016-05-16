@@ -16,10 +16,10 @@ RUN pip install jupyter_client
 RUN pip install --no-cache-dir bash_kernel
 
 RUN git clone https://github.com/mjbright/metakernel
-RUN pip install setuptools
-RUN cd metakernel      && python ./setup.py
-RUN cd metakernel_bash && python ./setup.py
-RUN cd
+#RUN pip install setuptools
+#RUN cd metakernel      && python ./setup.py
+#RUN cd metakernel_bash && python ./setup.py
+#RUN cd
 
 RUN jupyter kernelspec list
 
