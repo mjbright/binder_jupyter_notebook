@@ -13,6 +13,10 @@ RUN pip install --no-cache-dir bash_kernel
 
 RUN jupyter kernelspec list
 
+RUN pip install jupter_client
+
+RUN jupyter kernelspec list
+
 RUN which python
 RUN which pip
 
