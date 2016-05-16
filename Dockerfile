@@ -23,7 +23,10 @@ RUN git clone https://github.com/mjbright/metakernel
 
 # ---- Install my metakernel fork:
 #RUN pip install setuptools
-RUN cd pwd
+RUN pwd
+RUN cd
+RUN pwd
+RUN pwd; cd; pwd
 RUN find ~/src/git/metakernel
 RUN cd ~/src/git/metakernel                 && python ./setup.py install
 RUN cd ~/src/git/metakernel/metakernel_bash && python ./setup.py install
