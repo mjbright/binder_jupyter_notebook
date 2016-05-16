@@ -23,6 +23,12 @@ RUN mkdir -p ~/src/git && \
     cd RISE && \
     python setup.py install
 
+# ---- Install nbextensions (so can install table-of-contents extension):
+RUN cd ~/src/git && \
+    git clone https://github.com/ipython-contrib/Ipython-notebook-extensions.git && \
+    cd Ipython-notebook-extensions && \
+    python setup.py install
+
 # ---- Show installed kernels and python/pip versions:
 RUN jupyter kernelspec list
 
