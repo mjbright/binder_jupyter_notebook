@@ -21,9 +21,9 @@ RUN git clone https://github.com/mjbright/metakernel
 
 # ---- Install my metakernel fork:
 #RUN pip install setuptools
-RUN cd metakernel      && python ./setup.py install
-RUN cd metakernel_bash && python ./setup.py install
-RUN cd
+RUN cd ~/notebooks/metakernel                 && python ./setup.py install
+RUN cd ~/notebooks/metakernel/metakernel_bash && python ./setup.py install
+#RUN cd ~/notebooks
 
 # ---- Show installed kernels and python/pip versions:
 RUN jupyter kernelspec list
