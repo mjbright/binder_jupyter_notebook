@@ -9,11 +9,15 @@ RUN pip install --upgrade pip
 # Install bash_kernel:
 # Make sure not to create a cache dir else NB_UID switching
 # will hit issues.
-RUN pip install --no-cache-dir bash_kernel
-
 RUN jupyter kernelspec list
 
-RUN pip install jupter_client
+RUN pip install jupyter_client
+
+RUN pip install --no-cache-dir bash_kernel
+
+RUN git clone https://github.com/mjbright/metakernel
+RUN cd metakernel && ./setup.py
+RUN cd metakernel_bash && ./setup.py
 
 RUN jupyter kernelspec list
 
