@@ -16,6 +16,13 @@ RUN pip install jupyter_client
 RUN pip install --no-cache-dir bash_kernel
 RUN python -m bash_kernel.install
 
+# ---- Install RISE extension:
+RUN mkdir -p ~/src/git && \
+    cd ~/src/git && \
+    git clone https://github.com/damianavila/RISE && \
+    cd RISE && \
+    python setup.py install
+
 # ---- Show installed kernels and python/pip versions:
 RUN jupyter kernelspec list
 
