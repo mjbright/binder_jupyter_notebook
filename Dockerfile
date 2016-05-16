@@ -6,8 +6,8 @@ USER root
 
 RUN pip install --upgrade pip
 
-RUN jupyter kernelspec list
-
+# As advised here:
+#    https://github.com/binder-project/binder/issues/50
 RUN pip install jupyter_client
 
 # Install bash_kernel:
