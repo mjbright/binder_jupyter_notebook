@@ -14,6 +14,7 @@ RUN pip install jupyter_client
 # Make sure not to create a cache dir else NB_UID switching
 # will hit issues.
 RUN pip install --no-cache-dir bash_kernel
+RUN python -m bash_kernel.install
 
 # ---- Clone my metakernel fork:
 RUN git clone https://github.com/mjbright/metakernel
@@ -28,8 +29,6 @@ RUN cd
 RUN jupyter kernelspec list
 RUN which python
 RUN which pip
-
-RUN python -m bash_kernel.install
 
 USER main
 
