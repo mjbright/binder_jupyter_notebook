@@ -17,16 +17,12 @@ RUN pip install --no-cache-dir bash_kernel
 RUN python -m bash_kernel.install
 
 # ---- Clone my metakernel fork:
-RUN mkdir -p ~/src/git
-RUN cd ~/src/git
-RUN git clone https://github.com/mjbright/metakernel
+RUN mkdir -p ~/src/git && \
+    cd ~/src/git && \
+    git clone https://github.com/mjbright/metakernel
 
 # ---- Install my metakernel fork:
 #RUN pip install setuptools
-RUN pwd
-RUN cd
-RUN pwd
-RUN pwd; cd; pwd
 RUN find ~/src/git/metakernel
 RUN cd ~/src/git/metakernel                 && python ./setup.py install
 RUN cd ~/src/git/metakernel/metakernel_bash && python ./setup.py install
