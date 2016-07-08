@@ -32,6 +32,8 @@ RUN cd ~/src/git && \
 # ---- Show installed kernels and python/pip versions:
 RUN jupyter kernelspec list
 
+RUN apt-get install -y tcpdump
+
 USER main
 
 
