@@ -34,13 +34,14 @@ RUN mkdir -p ~/src/git && \
 # ---- Show installed kernels and python/pip versions:
 RUN jupyter kernelspec list
 
-# RUN apt-cache search tcpdump
-# RUN apt-cache search shark
-
-# RUN apt-get install -y tcpdump
+# Install man
+RUN apt-get install -y man
 
 # Install a set of networking tools, including tcpdump/tshark for writing tcpdump/tshark tutorials:
 RUN apt-get install -y dhcpdump ipgrab libnet-frame-dump-perl nstreams tcpdump tcpreplay tcpslice tcptrace tshark
+
+# Install Perl6 rakudo
+RUN apt-get install -y rakudo
 
 
 USER main
