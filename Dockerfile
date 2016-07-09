@@ -32,10 +32,10 @@ RUN mkdir -p ~/src/git && \
 # ---- Show installed kernels and python/pip versions:
 RUN jupyter kernelspec list
 
-RUN apt-cache search tcpdump
-RUN apt-cache search shark
+# RUN apt-cache search tcpdump
+# RUN apt-cache search shark
 
-RUN apt-get install -y tcpdump
+# RUN apt-get install -y tcpdump
 
 USER main
 
