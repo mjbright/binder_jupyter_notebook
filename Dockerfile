@@ -39,6 +39,10 @@ RUN jupyter kernelspec list
 
 # RUN apt-get install -y tcpdump
 
+# Install a set of networking tools, including tcpdump/tshark for writing tcpdump/tshark tutorials:
+apt-get install -y dhcpdump ipgrab libnet-frame-dump-perl nstreams tcpdump tcpreplay tcpslice tcptrace tshark
+
+
 USER main
 
 
